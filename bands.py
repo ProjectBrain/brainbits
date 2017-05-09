@@ -1,4 +1,3 @@
-import gevent
 import numpy as np
 import zmq
 from scipy import signal
@@ -29,7 +28,7 @@ while True:
         results = {}
         for name, rng in RANGES.items():
             indices = np.where((freq >= rng[0]) & (freq <= rng[1]))
-            results[name] = np.trapz(psd.take(indices, axis=1), indices)
+            results[name] = np.trapz(np.squeeze(psd.take(indices, axis=1)), indices)
         results['total'] = np.trapz(psd)
 
         #print results['beta']

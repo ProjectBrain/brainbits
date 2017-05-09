@@ -1,4 +1,3 @@
-import gevent
 import numpy as np
 import math
 import zmq

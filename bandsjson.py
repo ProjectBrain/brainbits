@@ -1,6 +1,5 @@
 import os
 import json
-import gevent
 import zmq
 
 context = zmq.Context()
