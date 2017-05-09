@@ -1,8 +1,6 @@
 import gevent
 import numpy as np
-#from zmq import green as zmq
 import zmq
-#import mne
 from scipy import signal
 
 context = zmq.Context()
@@ -34,7 +32,7 @@ while True:
             results[name] = np.trapz(psd.take(indices, axis=1), indices)
         results['total'] = np.trapz(psd)
 
-        #print results
+        #print results['beta']
         bands.send_json({k: v.tolist() for k, v in results.items()})
 
     except (KeyboardInterrupt, zmq.ContextTerminated):
