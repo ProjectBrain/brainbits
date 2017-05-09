@@ -48,7 +48,7 @@ def process():
         psd.append(spectrum[:ARRAY_LEN].tolist())
     freqs.send_json({'psd': psd, 'freq': freq[:ARRAY_LEN].tolist()})
 
-UPDATES_PER_SECOND = 8.0
+UPDATES_PER_SECOND = 4.0
 SECONDS_PER_WINDOW = SEGSIZE/FREQ
 PIPELINE = FREQ / UPDATES_PER_SECOND
 
