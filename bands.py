@@ -31,7 +31,6 @@ while True:
             results[name] = np.trapz(np.squeeze(psd.take(indices, axis=1)), indices)
         results['total'] = np.trapz(psd)
 
-        #print results['beta']
         bands.send_json({k: v.tolist() for k, v in results.items()})
 
     except (KeyboardInterrupt, zmq.ContextTerminated):

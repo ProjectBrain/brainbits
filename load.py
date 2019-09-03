@@ -10,6 +10,6 @@ raw = context.socket(zmq.PUB)
 raw.bind('ipc:///var/socks/raw')
 
 with open(filename, 'r') as f:
-  for line in f:
-    raw.send(line)
-    time.sleep(1./128)
+    for line in f:
+        raw.send_string(line)
+        time.sleep(1./128)
