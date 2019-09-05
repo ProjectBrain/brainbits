@@ -1,4 +1,4 @@
--e git+https://github.com/openyou/emokit@7f25321a1c3a240f5b64a1572e5f106807b1beea#egg=emokit&subdirectory=python
+-e git+https://github.com/projectbrain/emokit@08d29a6888a96b49cc4bbb68e2b892edc009c752#egg=emokit&subdirectory=python
 -e git+https://gitlab.com/NF6X_Archive/pyhidapi.git@4dd729929a7612745f7bbc56540b9f13a0f92ede#egg=pyhidapi
 future~=0.16.0
 numpy~=1.14.2
