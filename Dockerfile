@@ -2,7 +2,7 @@ FROM balenalib/raspberrypi3-alpine
 
 RUN mkdir -p /var/socks
 
-RUN apk add git python3
+RUN apk add git python3 build-base
 
 RUN apk add openblas-dev gfortran py3-scipy py3-numpy py3-crypto py3-zmq
 
